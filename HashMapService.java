@@ -44,6 +44,14 @@ public class HashMapService {
 		return 0;
 	}
 	
+	//method to remove a particular key value
+		public void remove(String key)
+		{
+			int bucketIndex = generateBucketIndex(key);
+			LinkedList searchLinkList = bucket[bucketIndex];
+			searchLinkList.delete(key);
+		}
+	
 	public void print()
 	{
 		for (int i = 0; i < bucket.length; i++)

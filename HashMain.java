@@ -21,5 +21,14 @@ public class HashMain {
 			hashMap2.put(string, 1);
 		}
 		hashMap2.print();
-	}
+	
+		HashMapService hashMap3 = new HashMapService();
+		String givenParagraph2= "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+		String[] myStr3 = givenParagraph2.toLowerCase().split(" ");
+		for (String string : myStr3){
+			hashMap3.put(string, 1);
+		}
+		hashMap3.remove("avoidable");
+		hashMap3.print();
+		}
 }
